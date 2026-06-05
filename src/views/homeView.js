@@ -42,7 +42,7 @@ export default function homeView() {
                   Puedes visualizar todas las reservas.
                 </p>
 
-                <button
+                <button id="btnGestionar"
                   class="mt-3 bg-blue-800 text-white px-4 py-2 rounded"
                 >
                   Gestionar Reservas
@@ -112,3 +112,4 @@ export default function homeView() {
     </div>
   `;
 }
+
