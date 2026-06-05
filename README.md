@@ -290,3 +290,13 @@ Los coders deberán implementar:
 ## Nota para los coders
 
 Aunque esta guía está escrita en español para facilitar la comprensión del proyecto, el archivo README.md entregado como evidencia debe estar redactado completamente en inglés.
+
+## Modifications
+- In src/home/homeView.js
+There is a button that ask for generate a new reservation, that button was edited with a new ID: btnNuevaReserva
+
+```
+          <button id="btnNuevaReserva"
+            class="mt-3 bg-green-600 text-white px-4 py-2 rounded"
+          >
+```

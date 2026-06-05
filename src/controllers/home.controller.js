@@ -1,6 +1,6 @@
-import ReservationCard from "@components/ReservationCard";
-import { getReservations } from "@services/reservation.service";
-import { getSession } from "@/utils";
+import ReservationCard from "@components/ReservationCard";//THis is not were the #reservationCOntainer works
+import { getReservations, createReservation } from "@services/reservation.service"; // This is important
+import { getSession } from "@/utils"; //checked is not here
 
 export const homeController = async () => {
   const container = document.querySelector("#reservationsContainer");
@@ -9,6 +9,7 @@ export const homeController = async () => {
 
   const reservations = await getReservations();
 
+  
   const filteredReservations =
     user.role === "admin"
       ? reservations
@@ -25,4 +26,66 @@ export const homeController = async () => {
         </p>
       </div>
     `;
+
+    const createForm = `
+    <div class="form-creation">
+
+      <div class="bg-white p-8 rounded-lg shadow w-96">
+
+        <h1 class="text-3xl font-bold mb-5">
+          Crear nueva reserva
+        </h1>
+
+        <form id="innerForm">
+
+          <input
+            type="text"
+            name="workspace"
+            placeholder="Indique la sala A o B"
+            class="border w-full p-2 rounded mb-3"
+          >
+
+          <input
+            type="date"
+            name="date"
+            class="border w-full p-2 rounded mb-4"
+          >
+
+          <label>Hora de inicio </label>
+          <input
+            type="time"
+            name="startHour"
+            class="border w-full p-2 rounded mb-3"
+          >
+
+          <label>Hora de finalizacion </label>
+          <input
+            type="time"
+            name="startHour"
+            class="border w-full p-2 rounded mb-3"
+          >
+
+          <label>Reason</label>
+          <textarea
+            type="text"
+            name="Reason"
+            class="border w-full p-2 rounded mb-3 resize-none"
+          ></textarea>
+          <button
+            class="bg-blue-600 text-white w-full py-2 rounded"
+          >
+            Crear
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  `;
+
+    const btnNuevaReserva = document.querySelector("#btnNuevaReserva");
+    btnNuevaReserva.addEventListener("click", () => {
+      document.body.innerHTML += createForm;
+    })
 };
