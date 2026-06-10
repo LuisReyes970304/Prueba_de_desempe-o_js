@@ -23,8 +23,8 @@ export const updateController = async () => {
             updateCreation.remove();
         });
 
-        innerForm.addEventListener("submit", async (submitEvent) => {
-            submitEvent.preventDefault();
+        innerForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
 
             const userId = document.querySelector("#userId").value.trim();
             const id = document.querySelector("#id").value.trim();

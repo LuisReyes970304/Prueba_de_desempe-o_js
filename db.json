@@ -35,26 +35,6 @@
     },
     {
       "workspace": "Sala B",
-      "date": "2026-06-24",
-      "startHour": "08:25",
-      "endHour": "09:25",
-      "reason": "Testeo update...",
-      "status": "pending",
-      "userId": "3",
-      "id": "tX-K5CIHHxw"
-    },
-    {
-      "workspace": "Sala A",
-      "date": "2026-06-12",
-      "startHour": "12:00",
-      "endHour": "13:00",
-      "reason": "test",
-      "status": "pending",
-      "userId": "3",
-      "id": "eQ8RDX7ueR4"
-    },
-    {
-      "workspace": "Sala B",
       "date": "2026-06-07",
       "startHour": "11:53",
       "endHour": "14:53",

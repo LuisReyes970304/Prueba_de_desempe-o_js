@@ -9,5 +9,5 @@ export const createReservation = (data) =>
 export const updateReservation = (data, id) =>
   http.patch(`/reservations/${id}`, data);
 
-export const deleteReservation = ( id) =>
+export const deleteReservation = (id) =>
   http.delete(`/reservations/${id}`);

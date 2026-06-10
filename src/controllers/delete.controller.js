@@ -9,22 +9,33 @@ export const deleteController = async () => {
 
     const admin = isAdmin()
 
-    const deleteR = deleteReservation();
-
     btnDelete.addEventListener("click", async (e) => {
         document.body.insertAdjacentHTML("beforeend", deleteF);
 
-        const delete_Form= document.querySelector(".delete_Form");
+        const delete_Form = document.querySelector(".delete_Form");
 
         const cancelBtn = document.querySelector("#cancelBtn");
         cancelBtn.addEventListener("click", () => {
             delete_Form.remove();
         });
 
-        const id = document.querySelector("#id").value.trim();
+            const innerForm = document.querySelector("#innerForm");
 
-        await deleteReservation(id)
-        alert("Reserva ELiminada")
-        delete_Form.remove();
+        innerForm.addEventListener("submit", async(e) => {
+            e.preventDefault();
+            const id = document.querySelector("#id").value.trim();
+
+            try {
+                await deleteReservation(id);
+                alert("Reserva Eliminada");
+                deleteFormElement.remove();
+
+            } catch (error) {
+                alert("La reserva a eliminar no existe")
+                console.error("Error deleting reservation:", error);
+            }
+        })
     })
+
+
 }
