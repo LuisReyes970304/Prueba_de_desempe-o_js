@@ -43,12 +43,13 @@ export default function reservationForm(){
                 required
                 >
 
-                <label>Reason</label>
+                <label>Razon</label>
                 <textarea
                 type="text"
-                id="rason"
+                id="reason"
                 class="border w-full p-2 rounded mb-3 resize-none"
                 ></textarea>
+
                 <button
                 class="bg-blue-600 text-white w-full py-2 rounded cursor-pointer"
                 type="submit"

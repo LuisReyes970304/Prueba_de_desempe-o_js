@@ -82,6 +82,16 @@
       "status": "pending",
       "userId": "3",
       "id": "2IstPMhfzXQ"
+    },
+    {
+      "workspace": "Sala A",
+      "date": "2026-06-13",
+      "startHour": "12:00",
+      "endHour": "13:00",
+      "reason": "TEST FINAL",
+      "status": "pending",
+      "userId": "2",
+      "id": "aQnIceJ-tX8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
