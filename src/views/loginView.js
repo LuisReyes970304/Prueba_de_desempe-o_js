@@ -4,9 +4,9 @@ export default function loginView() {
   setTimeout(() => {
     loginController();
   });
-
+  
   return `
-    <div class="min-h-screen flex justify-center items-center bg-slate-100">
+    <div class="min-h-screen flex justify-center items-center bg-slate-100" id="loginContainer">
 
       <div class="bg-white p-8 rounded-lg shadow w-96">
 

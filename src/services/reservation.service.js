@@ -6,8 +6,8 @@ export const getReservations = () =>
 export const createReservation = (data) =>
   http.post("/reservations", data);
 
-export const updateReservation = (data) =>
-  http.patch("/reservations", data);
+export const updateReservation = (data, id) =>
+  http.patch(`/reservations/${id}`, data);
 
 export const deleteReservation = (data) =>
   http.delete("/reservations", data);

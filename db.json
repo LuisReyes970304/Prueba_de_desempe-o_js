@@ -25,7 +25,7 @@
   "reservations": [
     {
       "id": "1",
-      "userId": 2,
+      "userId": "2",
       "workspace": "Sala A",
       "date": "2026-01-15",
       "startHour": "08:00",
@@ -34,53 +34,23 @@
       "status": "pending"
     },
     {
-      "id": "2",
-      "userId": 3,
-      "workspace": "Sala B",
-      "date": "2026-01-15",
-      "startHour": "10:00",
-      "endHour": "11:00",
-      "reason": "Daily Meeting",
-      "status": "approved"
-    },
-    {
-      "workspace": "A",
-      "date": "2222-02-22",
-      "startHour": "14:22",
-      "endHour": "14:22",
-      "reason": "222222",
-      "status": "pending",
-      "userId": 2,
-      "id": "54hGwIqzsZs"
-    },
-    {
-      "workspace": "A",
-      "date": "2026-06-06",
-      "startHour": "11:20",
-      "endHour": "11:20",
-      "reason": "fffff",
-      "status": "pending",
-      "userId": 2,
-      "id": "TG9EzHO6ONc"
-    },
-    {
       "workspace": "Sala B",
       "date": "2026-06-06",
       "startHour": "11:31",
       "endHour": "23:32",
       "reason": "test",
       "status": "pending",
-      "userId": 2,
+      "userId": "2",
       "id": "tX-K5CIHHxw"
     },
     {
-      "workspace": "Sala B",
-      "date": "2026-06-14",
-      "startHour": "12:46",
-      "endHour": "13:46",
-      "reason": "mmmmmmm",
+      "workspace": "Sala A",
+      "date": "2026-06-12",
+      "startHour": "12:00",
+      "endHour": "13:00",
+      "reason": "test",
       "status": "pending",
-      "userId": 2,
+      "userId": "3",
       "id": "eQ8RDX7ueR4"
     },
     {
@@ -90,8 +60,28 @@
       "endHour": "14:53",
       "reason": "ddddd",
       "status": "pending",
-      "userId": 2,
+      "userId": "2",
       "id": "V9glE4g1lBo"
+    },
+    {
+      "workspace": "Sala B",
+      "date": "2026-06-10",
+      "startHour": "14:00",
+      "endHour": "14:30",
+      "reason": "Urgente",
+      "status": "pending",
+      "userId": "2",
+      "id": "MHQovh46U9A"
+    },
+    {
+      "workspace": "Sala B",
+      "date": "2026-06-11",
+      "startHour": "14:40",
+      "endHour": "15:00",
+      "reason": "test",
+      "status": "pending",
+      "userId": "3",
+      "id": "2IstPMhfzXQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

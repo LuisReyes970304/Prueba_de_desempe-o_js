@@ -1,15 +1,22 @@
 import Sidebar from "@/components/Sidebar";
 import { getSession } from "@/utils";
 import { homeController } from "@/controllers/home.controller";
+import { createController } from "../controllers/manage.controller";
+import { updateController } from "../controllers/update.controller";
 
 export default function homeView() {
-  const user = getSession();
+    const user = getSession();
 
-  setTimeout(() => {
-    homeController();
-  });
+    setTimeout(() => {
+        homeController();
+        if (user.role === "admin") {
+            updateController();
+        } else {
+            createController();
+        }
+    });
 
-  return `
+    return `
     <div class="flex">
 
       ${Sidebar()}
@@ -29,8 +36,8 @@ export default function homeView() {
         </div>
 
         ${
-          user?.role === "admin"
-            ? `
+            user?.role === "admin"
+                ? `
               <section
                 class="bg-white p-5 rounded-lg shadow mb-6"
               >
@@ -42,7 +49,7 @@ export default function homeView() {
                   Puedes visualizar todas las reservas.
                 </p>
 
-                <button id="btnGestionar"
+                <button id="btnUpdate"
                   class="mt-3 bg-blue-800 text-white px-4 py-2 rounded"
                 >
                   Gestionar Reservas
@@ -50,7 +57,7 @@ export default function homeView() {
 
               </section>
             `
-            : `
+                : `
               <section
                 class="bg-white p-5"
               >
@@ -62,7 +69,7 @@ export default function homeView() {
                   Puedes visualizar únicamente tus reservas.
                 </p>
 
-                <button id="btnNuevaReserva"
+                <button id="btnNewReservation"
                   class="mt-3 bg-green-600 text-white px-4 py-2 rounded"
                 >
                   Nueva Reserva
@@ -87,9 +94,9 @@ export default function homeView() {
               class="text-sm text-slate-500"
             >
               ${
-                user?.role === "admin"
-                  ? "Mostrando todas las reservas"
-                  : "Mostrando únicamente tus reservas"
+                  user?.role === "admin"
+                      ? "Mostrando todas las reservas"
+                      : "Mostrando únicamente tus reservas"
               }
             </span>
           </div>
@@ -112,4 +119,3 @@ export default function homeView() {
     </div>
   `;
 }
-
