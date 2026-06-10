@@ -1,5 +1,5 @@
 export default function ReservationCard(reservation) {
-    const { workspace, date, startHour, endHour, reason, status } = reservation;
+    const { workspace, date, startHour, endHour, reason, status, id} = reservation;
     return `
     <article
       class="rounded"
@@ -15,6 +15,8 @@ export default function ReservationCard(reservation) {
         <p> Motivo: ${reason} </p>
 
         <p> Estado: <span class=""> ${status} </span> </p>
+
+        <p> id: <span class=""> ${id} </span> </p>
 
       </div>
     </article>

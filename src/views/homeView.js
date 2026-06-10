@@ -3,6 +3,7 @@ import { getSession } from "@/utils";
 import { homeController } from "@/controllers/home.controller";
 import { createController } from "../controllers/manage.controller";
 import { updateController } from "../controllers/update.controller";
+import { deleteController } from "../controllers/delete.controller";
 
 export default function homeView() {
     const user = getSession();
@@ -11,6 +12,7 @@ export default function homeView() {
         homeController();
         if (user.role === "admin") {
             updateController();
+            deleteController();
         } else {
             createController();
         }
@@ -53,6 +55,12 @@ export default function homeView() {
                   class="mt-3 bg-blue-800 text-white px-4 py-2 rounded"
                 >
                   Gestionar Reservas
+                </button>
+
+                <button id="btnDelete"
+                  class="mt-3 bg-red-800 text-white px-4 py-2 rounded"
+                >
+                  Delete Reserva
                 </button>
 
               </section>

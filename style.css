@@ -1,4 +1,4 @@
-.formCreation, .updateCreation {
+.formCreation, .updateCreation, .delete_Form {
     z-index: 1111;
     position: absolute;
     top: 0;

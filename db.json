@@ -35,12 +35,12 @@
     },
     {
       "workspace": "Sala B",
-      "date": "2026-06-06",
-      "startHour": "11:31",
-      "endHour": "23:32",
-      "reason": "test",
+      "date": "2026-06-24",
+      "startHour": "08:25",
+      "endHour": "09:25",
+      "reason": "Testeo update...",
       "status": "pending",
-      "userId": "2",
+      "userId": "3",
       "id": "tX-K5CIHHxw"
     },
     {
@@ -92,6 +92,16 @@
       "status": "pending",
       "userId": "2",
       "id": "aQnIceJ-tX8"
+    },
+    {
+      "workspace": "Sala B",
+      "date": "2026-06-16",
+      "startHour": "09:30",
+      "endHour": "10:30",
+      "reason": "Importante",
+      "status": "pending",
+      "userId": "2",
+      "id": "3IKATjOxdLg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
